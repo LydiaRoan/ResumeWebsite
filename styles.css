@@ -72,7 +72,7 @@ footer {
 }
 
 .photo {
-    background-image: url('media/Screenshot_20251116_091934_Photos.jpg');
+    background-image: url('Screenshot_20251116_091934_Photos.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -330,4 +330,5 @@ form button:hover {
         font-size: 1em;
         height: 150px;
     }
+
 }
