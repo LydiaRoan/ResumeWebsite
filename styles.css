@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+/*Colors: 
+301a4b - purple
+6db1bf - light blue
+ffeaec - off-white
+f39a9d - pink
+3f6c51 - green
+*/
+
+body {
+    background-color: #6db1bf;
+}
+
+header {
+    text-align: center;
+    background-color: #301a4b;
+    color: #ffeaec;
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
+}
+
+nav {
+    text-align: center;
+    border: 10px solid #301a4b;
+    background-color: #301a4b;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f39a9d;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #ffeaec;
+}
+
+video {
+    width: 90%;
+    max-height: 85vh;
+    position: relative;
+    left: 5%;
+    margin-bottom: 60px;
+}
+
+footer {
+    text-align: center;
+    background-color: #301a4b;
+    color: #ffeaec;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: 10px solid #301a4b;
+}
+
+/*Index Classes*/
+
+.about-me {
+    padding: 10px;
+    border: 2px solid #301a4b;
+    height: auto;
+    font-size: 1.2em;
+}
+
+.photo {
+    background-image: url('media/Screenshot_20251116_091934_Photos.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-container { 
+    display: grid; /*define grid layout*/
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "photo about-me about-me"
+    ;
+    gap: 10px;
+    height: 300px;
+    padding: 10px;
+}
+
+/*Resume Classes*/
+
+.title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.top {
+    border-bottom: 2px solid #301a4b;
+    text-align: center;
+}
+
+.theatre {
+    padding-bottom: 100px;
+}
+
+.work {
+    border-left: 2px solid #301a4b;
+    height: 500px;
+}
+
+.cs {
+    border-left: 2px solid #301a4b;
+    height: 400px;
+}
+
+.education {
+    text-align: center;
+    border: 2px dashed #301a4b;
+    padding-bottom: 10px;
+}
+
+.education ul {
+    list-style-position: inside;
+}
+
+.flow {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "education education education"
+        "theatre work cs"
+    ;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+}
+
+/*Photos Classes*/
+
+.outside {
+    padding-bottom: 50px;
+}
+
+.slideshow {
+    position: relative;
+    height: 75vh;
+    padding-bottom: 80px;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.slideshow img {
+    padding-top: 10px;
+    margin: auto;
+    display: none;
+    max-width: 90%;
+    max-height: 90%;
+    height: auto;
+}
+
+.slideshow img.active {
+    display: block;
+}
+
+.slideshow button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #000000;
+    border: none;
+    color: #ffeaec;
+    font-size: 2em;
+    padding: 0.3em 0.5em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slideshow .prev {
+    left: 10px;
+}
+
+.slideshow .next {
+    right: 10px;
+}
+
+.slideshow .caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2em;
+    margin-bottom: 100px;
+    color: #ffeaec;
+}
+
+/*Contact Classes*/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container {
+    width: 70%;
+    margin: 10px auto;
+    background-color: #ffeaec;
+    padding: 20px;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 3%;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form button {
+    background-color: #301a4b;
+    color: #f39a9d;
+}
+
+form button:hover {
+    color: #301a4b;
+    background-color: #f39a9d;
+}
+
+#comments {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    /*Photos Classes*/
+    .slideshow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+    }
+    
+    
+
+    .outside {
+        position: relative;
+    }
+
+    .slideshow button {
+        z-index: 999;
+    }
+
+    .slideshow .caption {
+        max-width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 960px) {
+    /*Index Classes*/
+    .grid-container {
+        height: 500px;
+    }
+
+    .about-me {
+        font-size: 1.9em;
+    }
+
+    /*Resume Classes*/
+    .education {
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    .title {
+        border-bottom: 2px dashed #301a4b;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    header {
+        font-size: 1em;
+    }
+
+    nav {
+        font-size: 1em;
+    }
+
+    /*Index Classes*/
+    .about-me {
+        font-size: 2em;
+    }
+
+    /*Resume Classes*/
+    .flow {
+        font-size: 1em;
+    }
+
+    .education {
+        font-size: 1em;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    /*Photos Classes*/
+    .slideshow .caption {
+        font-size: 1em;
+    }
+
+    /*Contact Classes*/
+    .contact-container {
+        font-size: 1em;
+        margin-bottom: 70px;
+    }
+
+    form button {
+        font-size: 1em;
+        height: 50px;
+    }
+
+    #fullname, #phonenumber, #email {
+        font-size: 1em;
+        height: 50px;
+    }
+
+    #comments {
+        font-size: 1em;
+        height: 150px;
+    }
+}
