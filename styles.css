@@ -232,6 +232,16 @@ form button:hover {
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 600px) {
+    .about-me {
+        font-size: 1em;
+    }
+
+    .video {
+        padding-top: 100px;
+    }
+}
+
 @media screen and (min-width: 600px) {
     /*Photos Classes*/
     .slideshow {
