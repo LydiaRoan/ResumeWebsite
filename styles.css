@@ -9,6 +9,8 @@
 ffeaec - off-white
 f39a9d - pink
 3f6c51 - green
+
+a0260b - redish for $ in resume
 */
 
 body {
@@ -100,6 +102,11 @@ footer {
 .top {
     border-bottom: 2px solid #301a4b;
     text-align: center;
+}
+
+.cheat {
+    text-align: center;
+    color: #a0260b
 }
 
 .theatre {
